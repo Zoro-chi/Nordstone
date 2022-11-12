@@ -1,0 +1,96 @@
+.auth {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+
+  .authContainer {
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: lightslategray;
+
+    .authLogo {
+      font-size: 7rem;
+
+      .authLogoSpan {
+        color: yellow;
+      }
+    }
+
+    .authFormWrap {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      flex-flow: column;
+      align-items: center;
+
+      .authForm {
+        display: flex;
+        flex-flow: column;
+        gap: 1rem;
+        max-width: fit-content;
+
+        input {
+          width: 22rem;
+          padding: 8px;
+          outline: none;
+          height: 3rem;
+          font-size: 1rem;
+          &:invalid {
+            border: 2px solid red;
+          }
+        }
+
+        .signIn-btn {
+          font-weight: 700;
+          font-size: 1.5rem;
+          width: 13rem;
+          height: 3rem;
+          border-radius: 10px;
+          background-color: rgb(207, 207, 3);
+          color: black;
+          border: none;
+          align-self: center;
+          cursor: pointer;
+
+          &:hover {
+            color: yellow;
+            background-color: rgb(48, 47, 47);
+            outline: none;
+          }
+        }
+
+        a {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+
+        .forgotPassword {
+          text-align: center;
+          color: firebrick;
+          cursor: pointer;
+          font-weight: 600;
+          margin-bottom: 2rem;
+        }
+
+        .error {
+          text-align: center;
+          color: red;
+          font-size: 1.15rem;
+        }
+      }
+    }
+
+    .error {
+      text-align: center;
+      color: red;
+      font-size: 1.15rem;
+    }
+  }
+}
