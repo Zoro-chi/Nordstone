@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 import "./auth.scss";
@@ -10,6 +10,7 @@ const Auth = ({ setUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,6 +23,8 @@ const Auth = ({ setUser }) => {
       );
       // console.log(createUser.user);
       setUser(createUser.user);
+      localStorage.setItem("user", JSON.stringify(createUser.user));
+      navigate("/firstPage");
     } catch (error) {
       console.log(error.message);
       setError(error.message);
@@ -46,8 +49,7 @@ const Auth = ({ setUser }) => {
               type="password"
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Password"
-              // pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-              pattern=".{8,}"
+              pattern=".{6,}"
               title="Must contain at least 6 characters"
               required
             />

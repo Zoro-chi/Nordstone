@@ -1,0 +1,30 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  position: relative;
+
+  button {
+    background-color: red;
+    color: yellow;
+    width: 25rem;
+    height: 5rem;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 3rem;
+  }
+
+  span {
+    color: firebrick;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}

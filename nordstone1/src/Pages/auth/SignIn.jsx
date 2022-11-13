@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { Link } from "react-router-dom";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
+} from "firebase/auth";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./auth.scss";
 import { app } from "../../config/firebaseConfig";
@@ -10,6 +14,7 @@ const SignIn = ({ setUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,6 +27,19 @@ const SignIn = ({ setUser }) => {
       );
       //   console.log(currentUser.user);
       setUser(currentUser.user);
+      localStorage.setItem("user", JSON.stringify(currentUser.user));
+      navigate("/firstPage");
+    } catch (error) {
+      console.log(error.message);
+      setError(error.message);
+    }
+  };
+
+  const handleForgotPassword = async () => {
+    setError("");
+    try {
+      await sendPasswordResetEmail(auth, email);
+      alert(`Reset mail sent to: ${email}`);
     } catch (error) {
       console.log(error.message);
       setError(error.message);
@@ -52,7 +70,10 @@ const SignIn = ({ setUser }) => {
               Sign In
             </button>
             <Link style={{ textDecoration: "none" }}>
-              <span className="forgotPassword"> Forgot Password? </span>
+              <span className="forgotPassword" onClick={handleForgotPassword}>
+                {" "}
+                Forgot Password?{" "}
+              </span>
             </Link>
             <Link to="/auth/register" style={{ textDecoration: "none" }}>
               <span style={{ color: "black" }}>

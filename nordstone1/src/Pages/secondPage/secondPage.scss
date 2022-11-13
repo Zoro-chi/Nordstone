@@ -1,0 +1,17 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  position: relative;
+
+  span {
+    color: firebrick;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
