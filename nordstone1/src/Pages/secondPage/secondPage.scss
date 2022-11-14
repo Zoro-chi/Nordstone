@@ -3,10 +3,47 @@
   width: 100vw;
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   background-color: whitesmoke;
   position: relative;
+
+  .contentUpload {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-flow: column;
+    width: 100%;
+    height: 700px;
+
+    .fileUpload {
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      height: 800px;
+      width: inherit;
+      align-items: center;
+
+      .preview {
+        align-self: center;
+
+        img {
+          max-height: 400px;
+        }
+      }
+
+      .uploadBtn {
+        background-color: red;
+        color: yellow;
+        width: 15rem;
+        font-size: 1.5rem;
+        padding: 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        border: none;
+      }
+    }
+  }
 
   span {
     color: firebrick;

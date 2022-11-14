@@ -1,0 +1,53 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+  align-items: center;
+  background-color: whitesmoke;
+
+  .prevPosts {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    padding: 1rem;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+
+    .prevPost {
+      display: flex;
+      flex-flow: column;
+      color: blue;
+      font-size: 2rem;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-flow: column;
+    height: fit-content;
+    text-align: center;
+
+    #post {
+      width: 600px;
+      outline: none;
+      padding: 8px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .postBtn {
+      background-color: red;
+      color: yellow;
+      width: 15rem;
+      font-size: 1.5rem;
+      padding: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      border: none;
+      align-self: center;
+    }
+  }
+}
