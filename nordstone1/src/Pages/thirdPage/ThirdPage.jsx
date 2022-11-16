@@ -37,8 +37,6 @@ const ThirdPage = ({ user, setUser }) => {
       });
   }, []);
 
-  console.log(fetchedPosts);
-
   return (
     <div className="container">
       <Nav user={user} setUser={setUser} />

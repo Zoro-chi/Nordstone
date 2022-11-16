@@ -32,6 +32,21 @@
         }
       }
 
+      .downloadedPrev {
+        display: flex;
+        flex-flow: column;
+
+        a {
+          width: 70%;
+          align-self: center;
+        }
+
+        p {
+          align-self: center;
+          text-align: center;
+        }
+      }
+
       .uploadBtn {
         background-color: red;
         color: yellow;
@@ -42,6 +57,9 @@
         cursor: pointer;
         border: none;
       }
+    }
+
+    .downloadedFiles {
     }
   }
 

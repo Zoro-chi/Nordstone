@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "./nav.scss";
 
 const Nav = ({ user, setUser }) => {
-  console.log(user);
   const navigate = useNavigate();
 
   const handleClick = () => {

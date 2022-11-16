@@ -13,14 +13,11 @@ import SignIn from "./Pages/auth/SignIn";
 import FirstPage from "./Pages/firstPage/FirstPage";
 import SecondPage from "./Pages/secondPage/SecondPage";
 import ThirdPage from "./Pages/thirdPage/ThirdPage";
+import FourthPage from "./Pages/fourthPage/FourthPage";
 
 const App = () => {
   const INITIAL = JSON.parse(localStorage.getItem("user")) || "";
   const [user, setUser] = useState(INITIAL);
-
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
 
   return (
     <Router>
@@ -58,6 +55,16 @@ const App = () => {
               <Navigate to="/auth/signIn" />
             ) : (
               <ThirdPage user={user} setUser={setUser} />
+            )
+          }
+        />
+        <Route
+          path="/fourthPage"
+          element={
+            !user ? (
+              <Navigate to="/auth/signIn" />
+            ) : (
+              <FourthPage user={user} setUser={setUser} />
             )
           }
         />

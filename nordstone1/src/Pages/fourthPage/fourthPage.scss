@@ -1,0 +1,57 @@
+.containerCalc {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+  background-color: whitesmoke;
+  position: relative;
+
+  .calcBtn {
+    background-color: red;
+    color: yellow;
+    width: 15rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    align-self: center;
+  }
+
+  .calculation {
+    form {
+      display: flex;
+      flex-flow: column;
+      gap: 2rem;
+
+      input,
+      select {
+        padding: 10px;
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .answer {
+    font-size: 2rem;
+    border: 5px dashed yellowgreen;
+    text-align: center;
+
+    p {
+      font-size: 2rem;
+      color: firebrick;
+      font-weight: 700;
+    }
+  }
+
+  .page {
+    color: firebrick;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
