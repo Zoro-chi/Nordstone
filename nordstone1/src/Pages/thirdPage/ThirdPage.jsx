@@ -54,7 +54,7 @@ const ThirdPage = ({ user, setUser }) => {
           name="post"
           id="post"
           cols="30"
-          rows="10"
+          rows="3"
           onChange={(e) => setPost(e.target.value)}
         ></textarea>
         <button className="postBtn" onClick={handleSubmit}>

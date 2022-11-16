@@ -3,10 +3,9 @@
   width: 100vw;
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: whitesmoke;
-  position: relative;
 
   button {
     background-color: red;

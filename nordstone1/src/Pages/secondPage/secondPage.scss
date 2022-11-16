@@ -3,10 +3,9 @@
   width: 100vw;
   display: flex;
   flex-flow: column;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   background-color: whitesmoke;
-  position: relative;
 
   .contentUpload {
     display: flex;
@@ -20,7 +19,7 @@
       display: flex;
       flex-flow: column;
       justify-content: space-between;
-      height: 800px;
+      height: 470px;
       width: inherit;
       align-items: center;
 
@@ -28,7 +27,7 @@
         align-self: center;
 
         img {
-          max-height: 400px;
+          max-height: 150px;
         }
       }
 

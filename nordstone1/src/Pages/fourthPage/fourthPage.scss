@@ -3,11 +3,10 @@
   width: 100vw;
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: space-between;
   gap: 5rem;
   align-items: center;
   background-color: whitesmoke;
-  position: relative;
 
   .calcBtn {
     background-color: red;
