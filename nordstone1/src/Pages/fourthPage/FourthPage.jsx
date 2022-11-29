@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Slider } from 'primereact/slider';
 
 import "./fourthPage.scss";
 import Nav from "../../components/nav/Nav";
@@ -26,7 +27,7 @@ const FourthPage = ({ user, setUser }) => {
   return (
     <div className="containerCalc">
       <Nav user={user} setUser={setUser} />
-      <div className="calculation">
+      {/* <div className="calculation">
         <form className="inputs">
           <input
             placeholder="Enter a number"
@@ -57,7 +58,28 @@ const FourthPage = ({ user, setUser }) => {
             Calculate
           </button>
         </form>
-      </div>
+      </div> */}
+
+      {/* <div className="slider"> */}
+        
+          <Slider value={num1} onChange={(e) => setNum1(e.value)} min={0} max={100} range={100}/>
+          <select
+            placeholder="Select an operator"
+            name="operator"
+            onChange={(e) => setOperator(e.target.value)}
+            required
+          >
+            <option value=""> </option>
+            <option value="+"> + </option>
+            <option value="-"> - </option>
+            <option value="*"> * </option>
+          </select>
+          <Slider value={num2} onChange={(e) => setNum2(e.value)} min={0} max={100}/>
+          <button onClick={handleClick} className="calcBtn" type="submit">
+            Calculate
+          </button>
+      {/* </div> */}
+
       {answer && (
         <span className="answer">
           Your answer is: <p> {answer} </p>
