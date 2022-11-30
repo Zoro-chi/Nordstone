@@ -1,61 +1,75 @@
 .containerCalc {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  gap: 5rem;
-  align-items: center;
-  background-color: whitesmoke;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	gap: 5rem;
+	align-items: center;
+	background-color: whitesmoke;
 
-  .calcBtn {
-    background-color: red;
-    color: yellow;
-    width: 15rem;
-    font-size: 1.5rem;
-    padding: 1rem;
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
-    align-self: center;
-  }
+	.calcBtn {
+		background-color: red;
+		color: yellow;
+		width: 15rem;
+		font-size: 1.5rem;
+		padding: 1rem;
+		border-radius: 10px;
+		cursor: pointer;
+		border: none;
+		align-self: center;
+	}
 
-  .calculation {
-    form {
-      display: flex;
-      flex-flow: column;
-      gap: 2rem;
+	.calculation {
+		form {
+			display: flex;
+			flex-flow: column;
+			gap: 2rem;
 
-      input,
-      select {
-        padding: 10px;
-        font-size: 2rem;
-        text-align: center;
-      }
-    }
-  }
+			input,
+			select {
+				padding: 10px;
+				font-size: 2rem;
+				text-align: center;
+			}
+		}
+	}
 
-  .answer {
-    font-size: 2rem;
-    border: 5px dashed yellowgreen;
-    text-align: center;
+	.answer {
+		font-size: 2rem;
+		border: 5px dashed yellowgreen;
+		text-align: center;
 
-    p {
-      font-size: 2rem;
-      color: firebrick;
-      font-weight: 700;
-    }
-  }
+		p {
+			font-size: 2rem;
+			color: firebrick;
+			font-weight: 700;
+		}
+	}
 
-  .page {
-    color: firebrick;
-    font-size: 2rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
+	.page {
+		color: firebrick;
+		font-size: 2rem;
+		font-weight: 600;
+		cursor: pointer;
+	}
 
-  .p-slider {
-    width: 100%;
-    background-color: yellow;
-  }
+	.slider {
+		width: 40vw;
+		display: flex;
+		flex-flow: column;
+		gap: 1.5rem;
+		align-items: center;
+
+		select {
+			width: 4rem;
+			font-size: 2rem;
+		}
+
+		span {
+			font-size: 1.5rem;
+			color: firebrick;
+			font-weight: 600;
+		}
+	}
 }
